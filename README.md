@@ -1,51 +1,79 @@
-# React + TypeScript + Vite
+# User Card Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a simple React application that displays user information in a styled card format. It fetches random user data from the [Random User API](https://randomuser.me/) and displays details such as the user's name, gender, and phone number along with their picture. The application also includes responsive design using `styled-components` to adapt the layout for mobile devices.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Fetch user data from an external API.
+- Display user information in a styled card layout.
+- Responsive design for mobile devices.
+- Random background colors for the card.
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Setup Instructions
 
-- Configure the top-level `parserOptions` property like this:
+Follow these steps to set up and run the project locally:
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+### Prerequisites
+
+Ensure you have the following installed:
+
+- Node.js (v14 or later)
+- npm or yarn
+
+### Installation Steps
+
+1. **Clone the repository:**
+
+   ```bash
+   git clone https://github.com/your-username/user-card-app.git
+   cd user-card-app
+   ```
+
+2. **Install dependencies:**
+
+   Using npm:
+   ```bash
+   npm install
+   ```
+
+
+3. **Start the development server:**
+
+   Using npm:
+   ```bash
+   npm start
+   ```
+
+4. **Open the application:**
+
+   Visit `http://localhost:5173` in your web browser.
+
+---
+
+## File Structure
+
+```plaintext
+user-card-app/
+├── public/            # Static assets
+├── src/               # Source code
+│   ├── components/    # React components
+│   │   └── UserCard.tsx # User card component
+│   ├── types/         # TypeScript types
+│   │   └── types.ts   # User interface definitions
+│   ├── App.tsx        # Main application file
+│   ├── index.tsx      # Application entry point
+├── package.json       # Project dependencies and scripts
+├── README.md          # Project description and setup instructions
+└── tsconfig.json      # TypeScript configuration
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+---
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+## Notes
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
-# Name_card
+- The application fetches data from the Random User API upon loading.
+- The `styled-components` library is used for styling components with support for responsive design.
+
+Enjoy using the User Card Application!
